@@ -1,108 +1,109 @@
 # DermaAI – AI-Powered Skin Disease Detection System
 
-DermaAI is an AI-powered dermatology assistance system designed for early skin disease detection using deep learning and computer vision. The application analyzes skin images, predicts possible skin conditions, provides confidence-based results, and offers safe preliminary guidance through a rule-based support module.
+DermaAI is an AI-powered dermatology assistance system designed for early skin disease detection using deep learning and computer vision. The system analyzes skin images, predicts possible skin conditions, provides confidence-based results, and offers safe preliminary guidance.
 
-> Built as an end-to-end healthcare AI project combining deep learning, image processing, and user-focused healthcare assistance.
+This project demonstrates the practical application of AI in healthcare by combining image classification, deep learning architectures, and structured diagnostic assistance.
+
+---
+
+## Project Overview
+
+Skin diseases are among the most common health concerns worldwide, but access to dermatological consultation is often limited. DermaAI addresses this gap by providing an AI-assisted solution for early-stage skin condition identification using medical image analysis.
+
+Users can provide skin images, and the model predicts the most likely condition using trained deep learning architectures.
 
 ---
 
 ## Features
 
-- Skin disease prediction from uploaded dermatological images
-- Deep learning-based image classification
-- CNN, Siamese CNN, and EfficientNet model experimentation
-- Transfer learning and fine-tuning for improved performance
+- AI-powered skin disease prediction
+- Deep learning-based dermatological image classification
+- Confidence score prediction
+- CNN-based feature extraction
+- EfficientNet transfer learning implementation
+- Siamese CNN experimentation
 - Image preprocessing and augmentation pipeline
-- Confidence-based prediction output
-- Multimodal architecture support (image + structured data)
-- Safe rule-based recommendation system
-- Interactive healthcare assistance concept
+- Multi-model comparative experimentation
+- Rule-based recommendation support
+- End-to-end implementation in Jupyter Notebook
+
+---
+
+## Notebook Included
+
+This repository directly contains the complete Jupyter Notebook implementation.
+
+The notebook includes:
+
+- Complete dataset loading pipeline
+- Data preprocessing
+- Image normalization
+- Data augmentation
+- Model architecture definitions
+- CNN implementation
+- Siamese network implementation
+- EfficientNet transfer learning setup
+- Training configuration
+- Hyperparameter setup
+- Model training
+- Validation workflow
+- Performance evaluation
+- Metrics calculation
+- Prediction logic
+- Experimental comparisons
+
+No separate source code files are required — everything is documented inside the notebook.
 
 ---
 
 ## Tech Stack
 
-### Languages
+### Programming Language
 - Python
 
-### Deep Learning / ML
+### Libraries & Frameworks
 - TensorFlow
 - Keras
 - NumPy
 - Pandas
-- Scikit-learn
-
-### Computer Vision / Image Processing
 - OpenCV
-- PIL / Image Processing Utilities
-
-### Model Architectures
-- Custom CNN
-- Siamese CNN
-- EfficientNet
-- Transfer Learning
-- Feature Fusion Models
-
-### Development Environment
+- Matplotlib
+- Scikit-learn
+- PIL
 - Jupyter Notebook
-- Google Colab / Local Training
 
 ---
 
-## Project Architecture
+## Deep Learning Architectures Used
 
-The system follows a structured AI pipeline:
+### Custom CNN
+A convolutional neural network designed for skin disease classification.
 
-```text
-Input Skin Image
-      ↓
-Image Preprocessing
-(Resize, Normalize, Augmentation)
-      ↓
-Feature Extraction
-(CNN / EfficientNet / Siamese Architecture)
-      ↓
-Classification Layer
-      ↓
-Confidence Score Generation
-      ↓
-Rule-Based Guidance / Recommendations
-      ↓
-Final Output
-```
-
----
-
-## Model Details
-
-This project explores multiple deep learning architectures for comparative performance analysis:
-
-### 1. Custom CNN
-A convolutional neural network built for dermatological image classification.
-
-- Conv2D Layers
-- ReLU Activation
+Architecture includes:
+- Conv2D layers
+- ReLU activation
 - MaxPooling
-- Flatten Layer
-- Dense Layers
-- Dropout Regularization
-- Softmax Output
+- Flatten layers
+- Dense layers
+- Dropout regularization
+- Softmax classification
 
 ---
 
-### 2. Siamese CNN
-Used for similarity-based feature learning and comparative classification.
+### Siamese CNN
+Used for similarity learning and comparative feature extraction.
 
-- Twin CNN branches
-- Shared weights
-- Distance-based feature comparison
-- Enhanced representation learning
+Features:
+- Shared convolutional branches
+- Distance-based comparison
+- Improved representation learning
 
 ---
 
-### 3. EfficientNet
-Transfer learning architecture used for improved performance.
+### EfficientNet
+Transfer learning model for optimized classification performance.
 
+Features:
 - Pretrained backbone
 - Fine-tuning
 - Efficient scaling
@@ -112,26 +113,30 @@ Transfer learning architecture used for improved performance.
 
 ## Dataset
 
-The model is trained using dermatological image datasets including:
+This project uses dermatological image datasets including:
 
-- **SCIN (Skin Condition Image Network)**
-- Public skin disease datasets for experimentation
+- SCIN (Skin Condition Image Network)
+- Additional skin disease image datasets used during experimentation
 
-Dataset preprocessing includes:
-
+Dataset-related preprocessing includes:
 - Image resizing
-- Pixel normalization
-- Data augmentation
+- Normalization
+- Augmentation
 - Batch generation
-- Multi-image input handling
+- Label encoding
+
+Detailed dataset workflow is available inside the notebook.
 
 ---
 
 ## Evaluation Metrics
 
-Model performance was evaluated using:
+Performance was evaluated using:
 
 - Accuracy
+- Precision
+- Recall
+- F1 Score
 - Top-1 Accuracy
 - Top-3 Accuracy
 - Top-5 Accuracy
@@ -142,78 +147,73 @@ Model performance was evaluated using:
 
 ## Training Optimizations
 
-Implemented optimization strategies include:
+Implemented optimizations include:
 
 - Adam Optimizer
 - Early Stopping
-- Model Checkpointing
-- Learning Rate Scheduling
-- Dropout Regularization
+- Dropout
 - Batch Normalization
+- Transfer Learning Fine-Tuning
+- Model Checkpointing
 
 ---
 
-## Installation
+## Repository Structure
 
-Clone the repository:
+```bash
+DermaAI/
+│
+├── DermaAI.ipynb
+├── README.md
+```
+
+The notebook contains the complete source code and workflow.
+
+---
+
+## How to Run
+
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/DermaAI.git
 cd DermaAI
 ```
 
-Install dependencies:
+### 2. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install tensorflow keras numpy pandas opencv-python matplotlib scikit-learn pillow
 ```
 
----
-
-## Usage
-
-Run the Jupyter notebook:
+### 3. Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
+### 4. Open Notebook
+
 Open:
 
 ```bash
-SCIN_Model.ipynb
+DermaAI.ipynb
 ```
 
-Train the model or run predictions using sample input images.
-
----
-
-## Project Structure
-
-```text
-DermaAI/
-│
-├── SCIN_Model.ipynb
-├── dataset/
-├── models/
-├── outputs/
-├── images/
-├── requirements.txt
-└── README.md
-```
+Run cells sequentially.
 
 ---
 
 ## Future Improvements
 
-- Web application deployment
-- Mobile application integration
-- Real-time camera-based detection
-- Explainable AI (Grad-CAM / attention maps)
+- Web deployment
+- Mobile app integration
+- Real-time camera detection
+- Explainable AI (Grad-CAM)
 - Doctor consultation integration
 - Cloud deployment
-- Larger dermatology datasets
 - Multi-language support
+- Clinical validation
 
 ---
 
@@ -221,19 +221,12 @@ DermaAI/
 
 This project is developed for educational and research purposes only.
 
-DermaAI does **not** replace professional medical diagnosis or treatment. Predictions are intended as preliminary assistance only.
+It is not intended to replace professional medical diagnosis or treatment.
 
 ---
 
 ## Author
 
-**Rohith Cherukuri**
-
-Computer Science Engineering (Data Science)  
+**Rohith Cherukuri**  
+B.Tech CSE (Data Science)  
 AI / Machine Learning Enthusiast
-
----
-
-## License
-
-This project is open-source and available under the MIT License.
